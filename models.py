@@ -27,12 +27,10 @@ def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
+    db.app = app
     moment.app = app
     db.init_app(app)
-    migrate = Migrate()
-    migrate.init_app(app, db)
-    with app.app_context():
-        db.create_all()
+    db.create_all()
 
 # ---------------------------------------------------------
 # Models.
