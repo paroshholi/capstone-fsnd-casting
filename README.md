@@ -6,7 +6,7 @@ The Casting Agency API supports a basic castic agency by allowing users to query
 
 # Running the API
 
-API endpoints can be accessed via 
+API endpoints can be accessed via https://capstone-casting-agency.onrender.com
 
 Auth0 information for endpoints that require authentication can be found in `setup.sh`.
 
