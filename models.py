@@ -24,7 +24,7 @@ moment = Moment()
 
 # Set-up database-related Flask modules.
 def setup_db(app, database_path=database_path):
-    app.config.from_pyfile('config.py', silent=False)
+    #app.config.from_pyfile('config.py', silent=False)
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
