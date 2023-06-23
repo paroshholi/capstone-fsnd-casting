@@ -7,7 +7,6 @@ The Casting Agency API supports a basic castic agency by allowing users to query
 # Running the API
 
 API endpoints can be accessed via https://capstone-casting-agency.onrender.com
-
 Auth0 information for endpoints that require authentication can be found in `setup.sh`.
 
 # Auth0 Setup
@@ -33,6 +32,8 @@ Create two roles for users under `Users & Roles` section in Auth0
 * Casting Director
 	* All permissions a Casting Director has and-
 	* Add or delete a movie from the database
+
+* tokens can be found in `setup.sh`
 
 # Permissions
 
