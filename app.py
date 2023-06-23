@@ -266,6 +266,6 @@ def create_app(test_config=None):
 
     return app
 
-App = create_app()
+app = create_app()
 if __name__ == '__main__':
-    App.run()
+    app.run()
