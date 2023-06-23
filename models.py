@@ -11,9 +11,9 @@ from flask_moment import Moment
 # ---------------------------------------------------------
 # App Config.
 # ---------------------------------------------------------
-try:
-    database_path = os.environ.get('DATABASE_URL')
-except:
+
+database_path = os.environ.get('DATABASE_URL').replace('postgres://', 'postgresql://')
+if not database_path:
     database_name = "caapstone"
     database_path = "postgres://{}/{}".format('localhost:5432', database_name)
     database_path = "postgres://casting_agency_2i1s_user:bm2DiqCurhfJl00zyBtmasmH7UL4i4x0@dpg-ciaadnl9aq0fvvfpnjsg-a.oregon-postgres.render.com/casting_agency_2i1s"
