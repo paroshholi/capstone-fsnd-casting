@@ -13,5 +13,4 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 # Connect to the database
 # DONE IMPLEMENT DATABASE URL
 class Config:
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
-
+    SQLALCHEMY_DATABASE_URI = "postgres://casting_agency_2i1s_user:bm2DiqCurhfJl00zyBtmasmH7UL4i4x0@dpg-ciaadnl9aq0fvvfpnjsg-a.oregon-postgres.render.com/casting_agency_2i1s"

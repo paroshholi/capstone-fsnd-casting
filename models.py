@@ -11,12 +11,12 @@ from flask_moment import Moment
 # ---------------------------------------------------------
 # App Config.
 # ---------------------------------------------------------
-
-database_path = os.environ.get('DATABASE_URL')
-if not database_path:
+try:
+    database_path = os.environ.get('DATABASE_URL')
+except:
     database_name = "caapstone"
     database_path = "postgres://{}/{}".format('localhost:5432', database_name)
-    database_path = "postgresql://postgres:12345678@localhost:5432/Capstone"
+    database_path = "postgres://casting_agency_2i1s_user:bm2DiqCurhfJl00zyBtmasmH7UL4i4x0@dpg-ciaadnl9aq0fvvfpnjsg-a.oregon-postgres.render.com/casting_agency_2i1s"
 
 db = SQLAlchemy()
 moment = Moment()
@@ -24,7 +24,7 @@ moment = Moment()
 
 # Set-up database-related Flask modules.
 def setup_db(app, database_path=database_path):
-    #app.config.from_pyfile('config.py', silent=False)
+    app.config.from_pyfile('config.py', silent=False)
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
